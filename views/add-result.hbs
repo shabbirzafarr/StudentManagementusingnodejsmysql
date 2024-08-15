@@ -50,62 +50,11 @@
   {{/if}}
 
   <!-- Form for Adding Result -->
-  <div class="container mt-4">
-    <form class="row g-3 needs-validation" method="POST" action="/addresult" novalidate>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputId" value="{{this.id}}" placeholder="Student ID"
-            name="id" required>
-          <label for="floatingInputId">Student ID</label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputName" value="{{this.name}}" placeholder="Name"
-            name="name" required>
-          <label for="floatingInputName">Name</label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputBatch" value="{{this.batch}}" placeholder="Batch"
-            name="batch" required>
-          <label for="floatingInputBatch">Batch</label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputGender" value="{{this.gender}}" placeholder="Gender"
-            name="gender" required>
-          <label for="floatingInputGender">Gender</label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputDepartment" value="{{this.department}}"
-            placeholder="Department" name="department" required>
-          <label for="floatingInputDepartment">Department</label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="tel" class="form-control" id="floatingInputPhone" value="{{this.phone}}" placeholder="Phone"
-            name="phone" required>
-          <label for="floatingInputPhone">Phone</label>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInputEmail" value="{{this.email}}" placeholder="Email"
-            name="email" required>
-          <label for="floatingInputEmail">Email</label>
-        </div>
-      </div>
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
+  <!-- User Form -->
+  <form class="row g-3 needs-validation" method="POST" action="/addresult" novalidate>
+    {{> result-form}}
+    <!-- Include your user-form partial template here -->
+  </form>
 
   <!-- Bootstrap JS Bundle (Bootstrap JS + Popper.js) -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
